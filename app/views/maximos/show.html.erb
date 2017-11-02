@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Juego:</strong>
+  <%= @maximo.juego %>
+</p>
+
+<p>
+  <strong>Puntaje:</strong>
+  <%= @maximo.puntaje %>
+</p>
+
+<%= link_to 'Edit', edit_maximo_path(@maximo) %> |
+<%= link_to 'Back', maximos_path %>

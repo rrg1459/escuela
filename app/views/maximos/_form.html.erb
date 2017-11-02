@@ -1,0 +1,27 @@
+<%= form_with(model: maximo, local: true) do |form| %>
+  <% if maximo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(maximo.errors.count, "error") %> prohibited this maximo from being saved:</h2>
+
+      <ul>
+      <% maximo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :juego %>
+    <%= form.text_field :juego, id: :maximo_juego %>
+  </div>
+
+  <div class="field">
+    <%= form.label :puntaje %>
+    <%= form.number_field :puntaje, id: :maximo_puntaje %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
